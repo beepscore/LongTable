@@ -17,7 +17,8 @@ class LongTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        populateItems()
+        items = LongTableViewController.populatedItems()
+        print("viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,13 +44,17 @@ class LongTableViewController: UITableViewController {
         return titles
     }
 
-    func populateItems() {
+    /// - Returns: array of sample items. Always returns same size array.
+    class func populatedItems() -> [Item] {
+        var items = [Item]()
+
         for index in 0..<10000 {
             var newItem = Item()
             newItem.name = "joe" + String(describing: index)
             newItem.note = "hi"
             items.append(newItem)
         }
+        return items
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,11 +85,16 @@ class LongTableViewController: UITableViewController {
     func itemIndex(indexPath: IndexPath) -> Int {
 
         var index: Int = 0
-
-        for section in 0..<indexPath.section {
-            index += tableView(tableView, numberOfRowsInSection: section)
+        if indexPath.section > 0 {
+            // in previous sections, add all rows in section
+            for section in 0..<indexPath.section {
+                index += tableView(tableView, numberOfRowsInSection: section)
+            }
         }
+
+        // in current section, add rows up to current row
         index += indexPath.row
+
         return index
     }
 

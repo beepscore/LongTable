@@ -13,6 +13,7 @@
 		DEF91B5E1F23912E0045DC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF91B5C1F23912E0045DC28 /* LaunchScreen.storyboard */; };
 		DEF91B691F23912E0045DC28 /* LongTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B681F23912E0045DC28 /* LongTableTests.swift */; };
 		DEF91B741F2393AB0045DC28 /* LongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */; };
+		DEF91B761F2395CB0045DC28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B751F2395CB0045DC28 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DEF91B681F23912E0045DC28 /* LongTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTableTests.swift; sourceTree = "<group>"; };
 		DEF91B6A1F23912E0045DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTableViewController.swift; sourceTree = "<group>"; };
+		DEF91B751F2395CB0045DC28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				DEF91B531F23912E0045DC28 /* AppDelegate.swift */,
+				DEF91B751F2395CB0045DC28 /* Item.swift */,
 				DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */,
 				DEF91B571F23912E0045DC28 /* Main.storyboard */,
 				DEF91B5A1F23912E0045DC28 /* Assets.xcassets */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF91B541F23912E0045DC28 /* AppDelegate.swift in Sources */,
+				DEF91B761F2395CB0045DC28 /* Item.swift in Sources */,
 				DEF91B741F2393AB0045DC28 /* LongTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

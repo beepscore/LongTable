@@ -1,5 +1,5 @@
 //
-//  LongTableTests.swift
+//  LongTableViewControllerTests.swift
 //  LongTableTests
 //
 //  Created by Steve Baker on 7/22/17.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import LongTable
 
-class LongTableTests: XCTestCase {
+class LongTableViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

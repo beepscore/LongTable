@@ -11,7 +11,7 @@
 		DEF91B591F23912E0045DC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF91B571F23912E0045DC28 /* Main.storyboard */; };
 		DEF91B5B1F23912E0045DC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF91B5A1F23912E0045DC28 /* Assets.xcassets */; };
 		DEF91B5E1F23912E0045DC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF91B5C1F23912E0045DC28 /* LaunchScreen.storyboard */; };
-		DEF91B691F23912E0045DC28 /* LongTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B681F23912E0045DC28 /* LongTableTests.swift */; };
+		DEF91B691F23912E0045DC28 /* LongTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B681F23912E0045DC28 /* LongTableViewControllerTests.swift */; };
 		DEF91B741F2393AB0045DC28 /* LongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */; };
 		DEF91B761F2395CB0045DC28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B751F2395CB0045DC28 /* Item.swift */; };
 		DEF91B781F2398210045DC28 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B771F2398210045DC28 /* ItemCell.swift */; };
@@ -35,7 +35,7 @@
 		DEF91B5D1F23912E0045DC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF91B5F1F23912E0045DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF91B641F23912E0045DC28 /* LongTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEF91B681F23912E0045DC28 /* LongTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTableTests.swift; sourceTree = "<group>"; };
+		DEF91B681F23912E0045DC28 /* LongTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DEF91B6A1F23912E0045DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTableViewController.swift; sourceTree = "<group>"; };
 		DEF91B751F2395CB0045DC28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		DEF91B671F23912E0045DC28 /* LongTableTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEF91B681F23912E0045DC28 /* LongTableTests.swift */,
+				DEF91B681F23912E0045DC28 /* LongTableViewControllerTests.swift */,
 				DEF91B6A1F23912E0045DC28 /* Info.plist */,
 			);
 			path = LongTableTests;
@@ -218,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEF91B691F23912E0045DC28 /* LongTableTests.swift in Sources */,
+				DEF91B691F23912E0045DC28 /* LongTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +422,7 @@
 				DEF91B6F1F23912E0045DC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEF91B701F23912E0045DC28 /* Build configuration list for PBXNativeTarget "LongTableTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +431,7 @@
 				DEF91B721F23912E0045DC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

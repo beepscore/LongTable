@@ -48,7 +48,31 @@ class LongTableViewController: UITableViewController {
         cell.nameLabel.text = items[indexPath.row].name
         cell.noteField.text = items[indexPath.row].note
 
+        // use tag to enable textField delegate methods to know row
+        cell.noteField.tag = indexPath.row
+
         return cell
     }
+
+}
+
+// MARK: - UITextFieldDelegate
+extension LongTableViewController: UITextFieldDelegate {
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        items[textField.tag].note = textField.text
+
+        // dismiss keyboard
+        textField.resignFirstResponder()
+
+        return true
+}
+
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//    }
 
 }

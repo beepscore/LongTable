@@ -12,6 +12,8 @@ class LongTableViewController: UITableViewController {
 
     var items = [Item]()
 
+    let numSections = 50
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +28,19 @@ class LongTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return numSections
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items.count / numSections
+    }
+
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        var titles = [String]()
+        for section in 0..<numSections {
+            titles.append(String(describing: section))
+        }
+        return titles
     }
 
     func populateItems() {
@@ -45,13 +55,37 @@ class LongTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemCell
 
-        cell.nameLabel.text = items[indexPath.row].name
-        cell.noteField.text = items[indexPath.row].note
+        let index = itemIndex(indexPath: indexPath)
+        let item = items[index]
+
+        cell.nameLabel.text = item.name
+        cell.noteField.text = item.note
 
         // use tag to enable textField delegate methods to know row
-        cell.noteField.tag = indexPath.row
+        cell.noteField.tag = index
+
+        // set background color for diagnostics during development
+        if indexPath.section == 0 {
+            cell.backgroundColor = .lightGray
+        } else if indexPath.section == 1 {
+            cell.backgroundColor = .yellow
+        } else {
+            cell.backgroundColor = .white
+        }
 
         return cell
+    }
+
+    /// for generality, handles sections of differing lengths
+    func itemIndex(indexPath: IndexPath) -> Int {
+
+        var index: Int = 0
+
+        for section in 0..<indexPath.section {
+            index += tableView(tableView, numberOfRowsInSection: section)
+        }
+        index += indexPath.row
+        return index
     }
 
 }

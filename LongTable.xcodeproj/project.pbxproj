@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE63AE641F23F255008AC55A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE63AE651F23F267008AC55A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DEF91B501F23912E0045DC28 /* LongTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF91B531F23912E0045DC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF91B581F23912E0045DC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		DEF91B471F23912E0045DC28 = {
 			isa = PBXGroup;
 			children = (
+				DE63AE651F23F267008AC55A /* README.md */,
+				DE63AE641F23F255008AC55A /* LICENSE */,
 				DEF91B521F23912E0045DC28 /* LongTable */,
 				DEF91B671F23912E0045DC28 /* LongTableTests */,
 				DEF91B511F23912E0045DC28 /* Products */,

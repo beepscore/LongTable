@@ -10,9 +10,12 @@ import UIKit
 
 class LongTableViewController: UITableViewController {
 
+    var items = [Item]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        populateItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,24 +26,31 @@ class LongTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return items.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    func populateItems() {
+        for index in 0..<10000 {
+            var newItem = Item()
+            newItem.name = "joe" + String(describing: index)
+            newItem.note = "hi"
+            items.append(newItem)
+        }
+    }
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemCell
+
+        cell.nameLabel.text = items[indexPath.row].name
+        cell.noteField.text = items[indexPath.row].note
 
         return cell
     }
-    */
+
 
     /*
     // MARK: - Navigation

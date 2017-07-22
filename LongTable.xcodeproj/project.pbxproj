@@ -14,6 +14,7 @@
 		DEF91B691F23912E0045DC28 /* LongTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B681F23912E0045DC28 /* LongTableTests.swift */; };
 		DEF91B741F2393AB0045DC28 /* LongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */; };
 		DEF91B761F2395CB0045DC28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B751F2395CB0045DC28 /* Item.swift */; };
+		DEF91B781F2398210045DC28 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF91B771F2398210045DC28 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DEF91B6A1F23912E0045DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTableViewController.swift; sourceTree = "<group>"; };
 		DEF91B751F2395CB0045DC28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DEF91B771F2398210045DC28 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				DEF91B531F23912E0045DC28 /* AppDelegate.swift */,
 				DEF91B751F2395CB0045DC28 /* Item.swift */,
+				DEF91B771F2398210045DC28 /* ItemCell.swift */,
 				DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */,
 				DEF91B571F23912E0045DC28 /* Main.storyboard */,
 				DEF91B5A1F23912E0045DC28 /* Assets.xcassets */,
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF91B781F2398210045DC28 /* ItemCell.swift in Sources */,
 				DEF91B541F23912E0045DC28 /* AppDelegate.swift in Sources */,
 				DEF91B761F2395CB0045DC28 /* Item.swift in Sources */,
 				DEF91B741F2393AB0045DC28 /* LongTableViewController.swift in Sources */,

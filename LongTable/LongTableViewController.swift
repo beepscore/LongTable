@@ -39,7 +39,7 @@ class LongTableViewController: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         var titles = [String]()
         for section in 0..<numSections {
-            titles.append(String(describing: section))
+            titles.append("\(self.tableView(tableView, numberOfRowsInSection: section) * section)")
         }
         return titles
     }

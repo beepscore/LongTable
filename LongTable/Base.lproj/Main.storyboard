@@ -122,10 +122,14 @@
             </objects>
             <point key="canvasLocation" x="853.60000000000002" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--ContainerVC-->
         <scene sceneID="tsc-xX-wl2">
             <objects>
-                <viewController id="PB2-Lb-PCY" sceneMemberID="viewController">
+                <viewController id="PB2-Lb-PCY" customClass="ContainerVC" customModule="LongTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dj-mN-of9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aq7-hQ-mEQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tc0-oM-efa">
                         <rect key="frame" x="0.0" y="0.0" width="175" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

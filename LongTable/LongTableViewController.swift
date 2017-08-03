@@ -18,7 +18,6 @@ class LongTableViewController: UITableViewController {
         super.viewDidLoad()
 
         items = LongTableViewController.populatedItems()
-        print("viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {

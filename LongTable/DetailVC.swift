@@ -17,6 +17,8 @@ class DetailVC: UIViewController {
     var noteLabel: UILabel?
 
 
+    // MARK: - view lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,8 @@ class DetailVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - configure labels
 
     func configureNameLabel() {
         nameLabel = constrainedLabel(in: containerView)
@@ -64,6 +68,8 @@ class DetailVC: UIViewController {
                                toItem: outerView, attribute: $0, multiplier: 1, constant: 0)
         })
     }
+
+    // MARK: - handle tap gestures
 
     func nameTapped(_ sender: UITapGestureRecognizer) {
 

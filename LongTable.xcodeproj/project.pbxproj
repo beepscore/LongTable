@@ -88,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				DEF91B531F23912E0045DC28 /* AppDelegate.swift */,
+				DE1E124D1F32D9AF009C0A61 /* DetailVC.swift */,
 				DEF91B751F2395CB0045DC28 /* Item.swift */,
 				DEF91B771F2398210045DC28 /* ItemCell.swift */,
 				DEF91B731F2393AB0045DC28 /* LongTableViewController.swift */,
@@ -95,7 +96,6 @@
 				DEF91B5A1F23912E0045DC28 /* Assets.xcassets */,
 				DEF91B5C1F23912E0045DC28 /* LaunchScreen.storyboard */,
 				DEF91B5F1F23912E0045DC28 /* Info.plist */,
-				DE1E124D1F32D9AF009C0A61 /* DetailVC.swift */,
 			);
 			path = LongTable;
 			sourceTree = "<group>";

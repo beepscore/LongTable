@@ -68,7 +68,7 @@ class DetailVC: UIViewController {
     func nameTapped(_ sender: UITapGestureRecognizer) {
 
         UIView.transition(with: containerView,
-                          duration: 0.5,
+                          duration: 0.2,
                           options: [UIViewAnimationOptions.transitionCurlUp],
                           animations: {
                             self.nameLabel?.removeFromSuperview()
@@ -81,7 +81,7 @@ class DetailVC: UIViewController {
     func noteTapped(_ sender: UITapGestureRecognizer) {
 
         UIView.transition(with: containerView,
-                          duration: 0.5,
+                          duration: 0.2,
                           options: [UIViewAnimationOptions.transitionCurlDown],
                           animations: {
                             self.noteLabel?.removeFromSuperview()

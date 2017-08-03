@@ -12,6 +12,7 @@ class DetailVC: UIViewController {
 
     var item: Item?
 
+    @IBOutlet weak var containerView: UIView!
     var nameLabel: UILabel?
     var noteLabel: UILabel?
 
@@ -31,8 +32,8 @@ class DetailVC: UIViewController {
         nameLabel = UILabel()
         nameLabel?.font = UIFont.systemFont(ofSize: 24)
         nameLabel?.textAlignment = .center
-        self.view.addSubview(nameLabel!)
-        constrainInnerView(nameLabel!, to: view)
+        self.containerView.addSubview(nameLabel!)
+        constrainInnerView(nameLabel!, to: containerView)
         nameLabel?.isUserInteractionEnabled = true
         nameLabel?.text = item?.name
         let nameTappedRecognizer = UITapGestureRecognizer(target: self,
@@ -45,8 +46,8 @@ class DetailVC: UIViewController {
         noteLabel?.backgroundColor = .lightGray
         noteLabel?.font = UIFont.systemFont(ofSize: 24)
         noteLabel?.textAlignment = .center
-        self.view.addSubview(noteLabel!)
-        constrainInnerView(noteLabel!, to: view)
+        self.containerView.addSubview(noteLabel!)
+        constrainInnerView(noteLabel!, to: containerView)
         noteLabel?.isUserInteractionEnabled = true
         noteLabel?.text = item?.note
         let noteTappedRecognizer = UITapGestureRecognizer(target: self,
@@ -66,7 +67,7 @@ class DetailVC: UIViewController {
 
     func nameTapped(_ sender: UITapGestureRecognizer) {
 
-        UIView.transition(with: view,
+        UIView.transition(with: containerView,
                           duration: 0.5,
                           options: [UIViewAnimationOptions.transitionCurlUp],
                           animations: {
@@ -79,7 +80,7 @@ class DetailVC: UIViewController {
 
     func noteTapped(_ sender: UITapGestureRecognizer) {
 
-        UIView.transition(with: view,
+        UIView.transition(with: containerView,
                           duration: 0.5,
                           options: [UIViewAnimationOptions.transitionCurlDown],
                           animations: {

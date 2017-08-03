@@ -78,8 +78,27 @@
                     <view key="view" contentMode="scaleToFill" id="Zqx-wA-yaC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMr-8i-8m2">
+                                <rect key="frame" x="100" y="184" width="175" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="wAq-Fn-nll"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PB2-Lb-PCY" kind="embed" id="9Jd-Fb-PYi"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VMr-8i-8m2" firstAttribute="leading" secondItem="Zqx-wA-yaC" secondAttribute="leading" constant="100" id="Fv9-3f-9h4"/>
+                            <constraint firstItem="VMr-8i-8m2" firstAttribute="top" secondItem="XDr-kY-ISm" secondAttribute="bottom" constant="120" id="P7X-gd-zDf"/>
+                            <constraint firstAttribute="trailing" secondItem="VMr-8i-8m2" secondAttribute="trailing" constant="100" id="xY1-0s-5d0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="VMr-8i-8m2" id="0Hy-ld-dZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSI-Hr-lI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,6 +121,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn0-38-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tsc-xX-wl2">
+            <objects>
+                <viewController id="PB2-Lb-PCY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tc0-oM-efa">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJV-L4-aM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3442" y="139"/>
         </scene>
     </scenes>
 </document>

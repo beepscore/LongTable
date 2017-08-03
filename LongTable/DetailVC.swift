@@ -29,12 +29,7 @@ class DetailVC: UIViewController {
     }
 
     func configureNameLabel() {
-        nameLabel = UILabel()
-        nameLabel?.font = UIFont.systemFont(ofSize: 24)
-        nameLabel?.textAlignment = .center
-        self.containerView.addSubview(nameLabel!)
-        constrainInnerView(nameLabel!, to: containerView)
-        nameLabel?.isUserInteractionEnabled = true
+        nameLabel = constrainedLabel(in: containerView)
         nameLabel?.text = item?.name
         let nameTappedRecognizer = UITapGestureRecognizer(target: self,
                                                           action: #selector(DetailVC.nameTapped(_:)))
@@ -42,17 +37,22 @@ class DetailVC: UIViewController {
     }
 
     func configureNoteLabel() {
-        noteLabel = UILabel()
+        noteLabel = constrainedLabel(in: containerView)
         noteLabel?.backgroundColor = .lightGray
-        noteLabel?.font = UIFont.systemFont(ofSize: 24)
-        noteLabel?.textAlignment = .center
-        self.containerView.addSubview(noteLabel!)
-        constrainInnerView(noteLabel!, to: containerView)
-        noteLabel?.isUserInteractionEnabled = true
         noteLabel?.text = item?.note
         let noteTappedRecognizer = UITapGestureRecognizer(target: self,
                                                           action: #selector(DetailVC.noteTapped(_:)))
         noteLabel?.addGestureRecognizer(noteTappedRecognizer)
+    }
+
+    func constrainedLabel(in parentView: UIView) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 24)
+        label.textAlignment = .center
+        parentView.addSubview(label)
+        constrainInnerView(label, to: parentView)
+        label.isUserInteractionEnabled = true
+        return label
     }
 
     func constrainInnerView(_ innerView: UIView, to outerView: UIView) {

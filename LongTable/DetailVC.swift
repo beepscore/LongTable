@@ -69,7 +69,8 @@ class DetailVC: UIViewController {
 
         UIView.transition(with: containerView,
                           duration: 0.2,
-                          options: [UIViewAnimationOptions.transitionCurlUp],
+                          // options: [UIViewAnimationOptions.transitionCurlUp],
+                          options: [UIViewAnimationOptions.transitionFlipFromTop],
                           animations: {
                             self.nameLabel?.removeFromSuperview()
                             self.configureNoteLabel()
@@ -82,7 +83,8 @@ class DetailVC: UIViewController {
 
         UIView.transition(with: containerView,
                           duration: 0.2,
-                          options: [UIViewAnimationOptions.transitionCurlDown],
+                          // options: [UIViewAnimationOptions.transitionCurlDown],
+                          options: [UIViewAnimationOptions.transitionFlipFromTop],
                           animations: {
                             self.noteLabel?.removeFromSuperview()
                             self.configureNameLabel()

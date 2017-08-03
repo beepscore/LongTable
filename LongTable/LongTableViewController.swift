@@ -98,6 +98,15 @@ class LongTableViewController: UITableViewController {
         return index
     }
 
+     // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tableView.indexPathForSelectedRow!
+        let index = itemIndex(indexPath: indexPath)
+        let detailVC = segue.destination as? DetailVC
+        detailVC?.item = items[index]
+    }
+
 }
 
 // MARK: - UITextFieldDelegate

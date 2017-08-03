@@ -96,9 +96,6 @@
                             <constraint firstAttribute="trailing" secondItem="VMr-8i-8m2" secondAttribute="trailing" constant="100" id="xY1-0s-5d0"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="containerView" destination="VMr-8i-8m2" id="0Hy-ld-dZy"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSI-Hr-lI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

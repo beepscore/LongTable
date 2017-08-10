@@ -14,6 +14,9 @@ class LongTableViewController: UITableViewController {
 
     let numSections = 50
 
+    /// activeTextField may be in any row, not necessarily the currently selected row
+    var activeTextField: UITextField?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -100,6 +103,12 @@ class LongTableViewController: UITableViewController {
      // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if activeTextField != nil {
+            // finish activeTextField editing, even if not in selected row
+            let _ = textFieldShouldReturn(activeTextField!)
+        }
+
         let indexPath = self.tableView.indexPathForSelectedRow!
         let index = itemIndex(indexPath: indexPath)
         let detailVC = segue.destination as? DetailVC
@@ -112,6 +121,7 @@ class LongTableViewController: UITableViewController {
 extension LongTableViewController: UITextFieldDelegate {
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeTextField = textField
         return true
     }
 
@@ -124,7 +134,8 @@ extension LongTableViewController: UITextFieldDelegate {
         return true
 }
 
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeTextField = nil
+    }
 
 }

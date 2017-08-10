@@ -27,15 +27,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-vr-7i8">
-                                            <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="12" width="171.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vw5-9Z-TCn">
-                                            <rect key="frame" x="321" y="7" width="46" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vw5-9Z-TCn">
+                                            <rect key="frame" x="195.5" y="7" width="171.5" height="30"/>
                                             <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <outlet property="delegate" destination="Xjq-ia-dmj" id="ALh-QK-e3d"/>
@@ -43,9 +43,11 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="vw5-9Z-TCn" firstAttribute="leading" secondItem="r8e-vr-7i8" secondAttribute="trailing" constant="16" id="GGe-A2-s5x"/>
                                         <constraint firstItem="r8e-vr-7i8" firstAttribute="leading" secondItem="4nT-BX-ij6" secondAttribute="leadingMargin" id="H8t-Jh-60e"/>
                                         <constraint firstItem="r8e-vr-7i8" firstAttribute="centerY" secondItem="4nT-BX-ij6" secondAttribute="centerY" id="JvN-Pn-5XI"/>
                                         <constraint firstAttribute="trailing" secondItem="vw5-9Z-TCn" secondAttribute="trailing" constant="8" id="MMU-t1-6EN"/>
+                                        <constraint firstItem="vw5-9Z-TCn" firstAttribute="width" secondItem="r8e-vr-7i8" secondAttribute="width" id="Pt9-GG-diK"/>
                                         <constraint firstItem="vw5-9Z-TCn" firstAttribute="centerY" secondItem="4nT-BX-ij6" secondAttribute="centerY" id="QJd-bA-4ab"/>
                                     </constraints>
                                 </tableViewCellContentView>

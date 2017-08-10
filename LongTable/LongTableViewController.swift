@@ -21,6 +21,7 @@ class LongTableViewController: UITableViewController {
         super.viewDidLoad()
 
         items = LongTableViewController.populatedItems()
+        title = "Long Table"
     }
 
     override func didReceiveMemoryWarning() {

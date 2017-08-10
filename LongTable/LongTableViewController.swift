@@ -133,7 +133,7 @@ extension LongTableViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
 
         return true
-}
+    }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         activeTextField = nil

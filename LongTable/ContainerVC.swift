@@ -70,7 +70,7 @@ class ContainerVC: UIViewController {
 
     // MARK: - handle tap gestures
 
-    func nameTapped(_ sender: UITapGestureRecognizer) {
+    @objc func nameTapped(_ sender: UITapGestureRecognizer) {
 
         UIView.transition(with: view,
                           duration: 0.2,
@@ -84,7 +84,7 @@ class ContainerVC: UIViewController {
         )
     }
 
-    func noteTapped(_ sender: UITapGestureRecognizer) {
+    @objc func noteTapped(_ sender: UITapGestureRecognizer) {
 
         UIView.transition(with: view,
                           duration: 0.2,
